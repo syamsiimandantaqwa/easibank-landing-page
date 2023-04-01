@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+:root {
+    /* primary */
+    --Dark-Blue: hsl(233, 26%, 24%);
+    --Lime-Green: hsl(136, 65%, 51%);
+    --Bright-Cyan: hsl(192, 70%, 51%);
+    /* neutral */
+    --Grayish-Blue: hsl(233, 8%, 62%);
+    --Light-Grayish-Blue: hsl(220, 16%, 96%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.request-btn {
+    border: none;
+    padding: 12px 1.5rem;
+    border-radius: 50px;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom right, var(--Lime-Green), var(--Bright-Cyan));
+}
+
+section {
+    padding-inline: 9%;
+}
+
+.container {
+    overflow: hidden;
+    color: var(--Grayish-Blue);
+    background-color: var(--Very-Light-Gray);
+}
+
+.navbar{
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    padding: .70rem 9%;
+    width: 100vw;
+    align-items: center;
+    background-color: var(--White);
+    right: 0;left: 0;top: 0;
+    box-shadow: 0 1px 1rem rgba(110, 110, 110, 0.5);
+}
+
+.navbar nav {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: var(--Grayish-Blue);
+    font-weight: 300;
+    font-size: .90rem;
+}
+
+.hero {
+    display: grid;
+    column-gap: 1rem;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+    background: url("images/bg-intro-desktop.svg") no-repeat;
+    background-position: calc(100vw - 800px);
+    background-size: calc(100vw - 400px);
+}
+
+.hero .box-1 {
+    align-self: center;
+}
+
+.hero .box-1 .title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--Dark-Blue);
+}
+
+.hero .box-1 .subtitle {
+    margin-block: 1.5rem;
+    width: 400px;
+}
+
+.hero .box-2{  
+    position: relative;  
+    width: 100%;
+    margin-right: -100px;
+}
+
+.hero .box-2 img {
+    position: absolute;
+    right: -50px;
+    object-fit: cover;
+    top: -100px; left: calc(100% - 520px);
+}
+
+.about {
+    padding-block: 4rem;
+    background-color: var(--Light-Grayish-Blue);
+}
+
+.about .title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--Dark-Blue);
+}
+
+.about .subtitle {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.about .content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.5rem;
+}
+
+.about .content .card .card-name{
+    font-weight: 400;
+    color: var(--Dark-Blue);
+    font-size: 1.5rem;
+    margin-block: 1.5rem;
+}
+
+.blog{
+    padding-block: 4rem;
+}
+
+.blog .title {
+    font-weight: 400;
+    color: var(--Dark-Blue);
+    font-size: 2rem;
+}
+
+.blog .content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.blog .content .card {
+    background-color: var(--White);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.blog .content .card img{
+    object-fit: cover;
+    object-position: center;
+    height: 200px;
+}
+
+.blog .content .card .card-data{
+    padding: 1rem;
+}
+
+.blog .content .card .author{
+    font-size: 13px;
+}
+
+.blog .content .card .card-title{
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1rem;
+    display: inline-block;
+    margin-block: 10px;
+    color: var(--Dark-Blue);
+}
+.blog .content .card .content-article{
+    font-size: 14px;
+}
